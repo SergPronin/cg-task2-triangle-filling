@@ -3,6 +3,7 @@ package ru.vsu.cs.cg.pronin_s_v.task2_triangle_filling.rasterizationfxapp;
 
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import ru.vsu.cs.cg.pronin_s_v.task2_triangle_filling.rasterization.Rasterization;
@@ -16,6 +17,14 @@ public class RasterizationController {
 
     @FXML
     private void initialize() {
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+
+        Rasterization.fillTriangle(
+                gc,
+                100, 100, Color.RED,
+                300, 200, Color.GREEN,
+                150, 400, Color.BLUE
+        );
         anchorPane.prefWidthProperty().addListener((ov, oldValue, newValue) -> canvas.setWidth(newValue.doubleValue()));
         anchorPane.prefHeightProperty().addListener((ov, oldValue, newValue) -> canvas.setHeight(newValue.doubleValue()));
 
