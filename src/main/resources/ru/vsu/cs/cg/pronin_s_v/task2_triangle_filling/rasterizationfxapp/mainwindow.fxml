@@ -3,7 +3,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.canvas.Canvas?>
 
-<AnchorPane fx:id="anchorPane" xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ru.vsu.cs.cg.pronin_s_v.task2_triangle_filling.rasterizationfxapp.RasterizationController">
-    <Canvas fx:id="canvas" width="800" height="600" AnchorPane.topAnchor="30.0"/>
+<AnchorPane fx:id="anchorPane"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ru.vsu.cs.cg.pronin_s_v.task2_triangle_filling.rasterizationfxapp.RasterizationController"
+            style="-fx-background-color: black;">
+
+    <Canvas fx:id="canvas"
+            width="800" height="600"
+            AnchorPane.topAnchor="0.0"
+            AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0"
+            AnchorPane.bottomAnchor="0.0"/>
 </AnchorPane>
